@@ -5,7 +5,7 @@ Perl, bash, R, and python scripts are provided to run the GT-seq pipeline from f
 
 ***Please note:*** *while the genotyper perl script (GTseq_Genotyper_v3_Tetra.pl) initially records tetraploid genotypes, the probe (allele) counts are then used by an R script (called by Atr_GTseq_GenoCompile_ploidy_v1.sh) to infer ploidy and create genotypes corrected by that inferred ploidy.*
 
-Prerequisites for these scripts are the installation of perl, python, parallel (linux), and R (3.6). Required R packages should be installed automatically with active internet connection. They should be placed in the path (e.g. /usr/local/bin/) These scripts have only been tested extensively on RHEL and come with NO WARRANTY.
+Prerequisites for these scripts are the installation of perl, python, parallel (linux), and R (3.6). Required R packages should be installed automatically with active internet connection. The scripts should be placed in the path (e.g. /usr/local/bin/). They have only been tested extensively on RHEL and come with NO WARRANTY.
 
 An R script containing functions used in Willis et al. (2020) is also provided, *ploidy_genotype_etc_from_genos.R*. It is intended to be run piecemeal in e.g. **Rstudio**. Example genos input files containing 1) parents and offspring from a known cross containing ploidy variation and 2) samples of known but variable ploidy are provided. *Genos* files are an intermediate product of the GT-seq pipeline containing probe (allele) counts for each locus, one file per individual. The script is designed to be run with the folder containing the genos files as the working directory.
 
