@@ -7,7 +7,7 @@ Perl, bash, R, and python scripts are provided to run the GT-seq pipeline from f
 
 Prerequisites for these scripts are the installation of perl, python, parallel (linux), and R. Required R packages should be installed automatically with active internet connection. These scripts have only been tested extensively on RHEL and come with NO WARRANTY.
 
-An R script containing functions used in Willis et al. (submitted) is also provided, *ploidy_genotype_etc_from_genos.R*. It is intended to be run piecemeal in e.g. **Rstudio**. Example genos input files containing 1) parents and offspring from a known cross containing ploidy variation and 2) samples of known but variable ploidy are provided. *Genos* files are an intermediate product of the GT-seq pipeline containing probe (allele) counts for each locus, one file per individual. The script is designed to be run with the folder containing the genos files as the working directory.
+An R script containing functions used in Willis et al. (2020) is also provided, *ploidy_genotype_etc_from_genos.R*. It is intended to be run piecemeal in e.g. **Rstudio**. Example genos input files containing 1) parents and offspring from a known cross containing ploidy variation and 2) samples of known but variable ploidy are provided. *Genos* files are an intermediate product of the GT-seq pipeline containing probe (allele) counts for each locus, one file per individual. The script is designed to be run with the folder containing the genos files as the working directory.
 
 Please described problems with the pipeline or R script in the Github *Issues* tab. Please note that we do not have sufficient resources to provide support for basic Linux, perl, bash, R issues that are dataset/user-specific.
 
@@ -43,13 +43,13 @@ make directory for the genos files
 `NTC_GTseq_GenoCompile_v3_Tetra.pl > Lxxxx_N_T_C.csv`
 `cd ..`
 #### Create summary files
-`GTseq_SummaryFigures_v3_Tetra.py`
-> >>/data/GTseq_Libraries/NS_0000/AtrGTseqV2.0/Individuals/Lxxxx_Genos/
-> >> Lxxxx
-
-`convert *png Lxxxx.pdf`
-
-`rm -f *png`
+```
+GTseq_SummaryFigures_v3_Tetra.py
+>> /data/GTseq_Libraries/NS_0000/AtrGTseqV2.0/Individuals/Lxxxx_Genos/
+>> Lxxxx
+convert *png Lxxxx.pdf
+rm -f *png
+```
 
 ## References
 
